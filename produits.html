@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             color: var(--noir);
             background-color: var(--blanc);
             overflow-x: hidden;
@@ -33,15 +33,15 @@
 
         .header {
             background-color: var(--rose-pale);
-            padding: 12px 0;
+            padding: 15px 0;
             text-align: center;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 1.7rem;
+            font-size: 2rem;
             font-weight: 300;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: var(--noir);
         }
 
@@ -50,15 +50,14 @@
         }
 
         .nav-links {
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         .nav-links a {
-            margin: 0 8px;
+            margin: 0 10px;
             text-decoration: none;
             color: var(--noir);
             font-weight: 500;
-            font-size: 0.95rem;
             transition: all 0.3s ease;
         }
 
@@ -67,15 +66,15 @@
         }
 
         .section {
-            padding: 50px 15px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
             font-weight: 300;
             letter-spacing: 1px;
             color: var(--noir);
@@ -85,18 +84,18 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 70px;
-            height: 2px;
+            width: 100px;
+            height: 3px;
             background: var(--rose-fonce);
         }
 
         .product-hero {
             background-color: var(--noir-fonce);
             color: var(--blanc);
-            padding: 40px 15px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -106,61 +105,75 @@
         }
 
         .hero-title {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: var(--rose-pale);
-            line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
             opacity: 0.9;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .feature-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px 15px;
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
             transition: all 0.3s ease;
         }
 
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
         .feature-icon {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: var(--rose-pale);
         }
 
         .feature-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--rose-pale);
         }
 
         .content-block {
             display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-bottom: 40px;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .content-block.reverse {
+            flex-direction: row-reverse;
         }
 
         .content-image {
-            border-radius: 12px;
+            flex: 1;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            min-height: 250px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
+            min-height: 400px;
             background-color: var(--gris-clair);
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .content-image:hover {
+            transform: scale(1.03);
         }
 
         .content-image img {
@@ -171,141 +184,153 @@
         }
 
         .content-text {
-            padding: 0 5px;
+            flex: 1;
         }
 
         .content-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: var(--rose-fonce);
         }
 
         .content-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             color: var(--noir);
         }
 
         .feature-list {
             list-style: none;
-            margin: 15px 0;
+            margin: 20px 0;
         }
 
         .feature-list li {
-            margin-bottom: 10px;
-            padding-left: 25px;
+            margin-bottom: 15px;
+            padding-left: 30px;
             position: relative;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .feature-list li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            top: -1px;
+            top: 0;
             color: var(--rose-fonce);
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
         }
 
         .testimonial {
             font-style: italic;
-            margin: 20px 0;
-            padding: 15px;
+            margin: 30px 0;
+            padding: 20px;
             background: rgba(233, 179, 188, 0.1);
-            border-left: 3px solid var(--rose-fonce);
-            border-radius: 0 6px 6px 0;
-            font-size: 0.95rem;
+            border-left: 4px solid var(--rose-fonce);
+            border-radius: 0 8px 8px 0;
         }
 
         .promo-section {
             background: linear-gradient(135deg, var(--rose-pale), var(--bleu-ciel));
-            padding: 40px 15px;
+            padding: 60px 20px;
             text-align: center;
-            border-radius: 12px;
-            margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            margin: 60px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .promo-title {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             color: var(--noir);
         }
 
         .promo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .promo-card {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+            background: var(--blanc);
         }
 
         .promo-amount {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: var(--rose-fonce);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .promo-desc {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .care-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .care-step {
             text-align: center;
-            padding: 20px 15px;
+            padding: 30px;
             background: var(--gris-clair);
-            border-radius: 12px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .care-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background: var(--blanc);
         }
 
         .step-icon {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             color: var(--rose-fonce);
         }
 
         .step-title {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
             color: var(--noir);
         }
 
         .order-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
         .order-step {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: var(--rose-pale);
-            border-radius: 8px;
+            border-radius: 10px;
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -12px;
-            left: -12px;
-            width: 30px;
-            height: 30px;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
             background: var(--rose-fonce);
             color: white;
             border-radius: 50%;
@@ -313,42 +338,41 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         /* Styles pour la nouvelle section Longueurs & Prix */
         .pricing-container {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
 
         .pricing-category {
             background: var(--gris-clair);
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .pricing-category h3 {
-            margin-bottom: 15px;
-            padding-bottom: 8px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
             border-bottom: 2px solid var(--rose-fonce);
             color: var(--noir);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .price-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 1px dashed #ddd;
-            font-size: 0.95rem;
         }
 
         .price {
@@ -357,62 +381,68 @@
         }
 
         .promo-banner {
-            margin-top: 20px;
-            padding: 12px;
+            margin-top: 30px;
+            padding: 15px;
             background: var(--rose-pale);
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
             font-weight: 500;
             color: var(--noir);
             border: 1px solid var(--rose-fonce);
-            font-size: 0.95rem;
         }
 
         /* Styles pour le formulaire de commande */
         .order-form-container {
             background: var(--blanc);
-            padding: 25px 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            margin: 40px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 60px auto;
             max-width: 800px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             font-weight: 600;
             color: var(--noir);
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .form-group select, 
         .form-group input {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group select:focus, 
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--rose-fonce);
+            box-shadow: 0 0 0 3px rgba(233, 179, 188, 0.3);
         }
 
         .price-display {
             background-color: var(--rose-pale);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 25px 0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
         }
 
         .price-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
             border-bottom: 1px dashed #ddd;
-            font-size: 0.95rem;
         }
 
         .price-row:last-child {
@@ -422,9 +452,9 @@
 
         .total-row {
             font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 8px;
-            padding-top: 8px;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            padding-top: 10px;
             border-top: 2px solid var(--rose-fonce);
         }
 
@@ -444,44 +474,58 @@
             background-color: var(--vert-whatsapp);
             color: white;
             text-align: center;
-            padding: 14px;
-            border-radius: 8px;
+            padding: 16px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 15px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-whatsapp i {
-            margin-right: 8px;
+            margin-right: 10px;
         }
 
         .info-bubble {
             background-color: var(--rose-pale);
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 0.9rem;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 1rem;
             text-align: center;
             border: 1px dashed var(--rose-fonce);
         }
 
         .whatsapp-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background-color: var(--vert-whatsapp);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             z-index: 1000;
+            transition: all 0.3s ease;
             animation: bounce 2s ease infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes bounce {
@@ -489,10 +533,10 @@
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-10px);
+                transform: translateY(-15px);
             }
             60% {
-                transform: translateY(-7px);
+                transform: translateY(-10px);
             }
         }
 
@@ -500,8 +544,8 @@
             background-color: var(--noir);
             color: var(--blanc);
             text-align: center;
-            padding: 40px 15px;
-            margin-top: 40px;
+            padding: 60px 20px;
+            margin-top: 60px;
         }
 
         .footer-content {
@@ -510,25 +554,31 @@
         }
 
         .footer-logo {
-            font-size: 1.7rem;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
         }
 
         .social-links {
-            margin: 15px 0;
+            margin: 20px 0;
         }
 
         .social-links a {
             display: inline-block;
-            margin: 0 8px;
+            margin: 0 10px;
             color: var(--blanc);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--rose-pale);
+            transform: translateY(-3px);
         }
 
         .copyright {
-            margin-top: 15px;
-            font-size: 0.8rem;
+            margin-top: 20px;
+            font-size: 0.9rem;
             opacity: 0.7;
         }
 
@@ -541,47 +591,73 @@
             background: linear-gradient(45deg, var(--rose-pale), var(--bleu-ciel));
             color: var(--noir);
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.2rem;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
         }
 
-        /* Améliorations spécifiques pour mobile */
-        @media (min-width: 769px) {
+        @media (max-width: 768px) {
             .content-block {
-                flex-direction: row;
-                align-items: center;
-                gap: 30px;
+                flex-direction: column;
             }
             
             .content-block.reverse {
-                flex-direction: row-reverse;
-            }
-            
-            .section {
-                padding: 70px 20px;
+                flex-direction: column;
             }
             
             .section-title {
                 font-size: 2rem;
-                margin-bottom: 40px;
-            }
-            
-            .product-hero {
-                padding: 60px 20px;
             }
             
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
-            .content-title {
+            .content-image {
+                min-height: 300px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-category {
+                margin-bottom: 20px;
+            }
+            
+            .order-form-container {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .hero-title {
                 font-size: 1.8rem;
             }
             
-            .feature-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 30px;
+            .content-title {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-category h3 {
+                font-size: 1.2rem;
+            }
+            
+            .price-item {
+                font-size: 0.9rem;
+            }
+            
+            .order-form-container {
+                padding: 20px;
+            }
+            
+            .btn-whatsapp {
+                padding: 14px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -654,7 +730,7 @@
 
     <!-- Nouvelle Section : Longueurs & Prix -->
     <section class="section">
-        <div class="content-block">
+        <div class="content-block reverse">
             <div class="content-image">
                 <img src="images/image3.jpg" alt="Longueurs et prix" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image3.jpg<br>Longueurs et prix</div>'">
             </div>
@@ -715,7 +791,7 @@
 
     <!-- Section 2 : Longueurs spéciales -->
     <section class="section">
-        <div class="content-block">
+        <div class="content-block reverse">
             <div class="content-image">
                 <img src="images/image2.jpg" alt="Longueurs spéciales" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image2.jpg<br>Longueurs spéciales</div>'">
             </div>
@@ -753,7 +829,7 @@
 
     <!-- Section 4 : Pourquoi choisir MosieShop -->
     <section class="section">
-        <div class="content-block">
+        <div class="content-block reverse">
             <div class="content-image">
                 <img src="images/image6.jpg" alt="Pourquoi choisir MosieShop" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image6.jpg<br>Pourquoi choisir MosieShop</div>'">
             </div>
@@ -792,7 +868,7 @@
                 </div>
             </div>
             
-            <p style="margin-top: 20px; font-size: 1rem;">
+            <p style="margin-top: 30px; font-size: 1.1rem;">
                 🎁 Réduction automatique lors de la commande sur WhatsApp<br>
                 *Pas besoin de code promo, la réduction est calculée pour vous !
             </p>
@@ -824,7 +900,7 @@
 
     <!-- Section 6 : Entretien -->
     <section class="section">
-        <div class="content-block">
+        <div class="content-block reverse">
             <div class="content-image">
                 <img src="images/image8.jpg" alt="Entretien des extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image8.jpg<br>Entretien des extensions</div>'">
             </div>
@@ -835,37 +911,37 @@
                     <div class="care-step">
                         <div class="step-icon">🧼</div>
                         <h3 class="step-title">Shampooing doux</h3>
-                        <p>Lavez avec shampooing sans sulfate</p>
+                        <p>Lavez vos extensions avec un shampoing doux sans sulfate</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💧</div>
                         <h3 class="step-title">Hydratation</h3>
-                        <p>Utilisez un après-shampoing nourrissant</p>
+                        <p>Hydratez-les régulièrement avec un après-shampoing ou un masque nourrissant</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">🌬️</div>
                         <h3 class="step-title">Séchage naturel</h3>
-                        <p>Privilégiez l'air libre</p>
+                        <p>Laissez sécher à l'air libre autant que possible</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">🔥</div>
                         <h3 class="step-title">Protection thermique</h3>
-                        <p>Avant brushing ou lissage</p>
+                        <p>Utilisez un protecteur thermique avant le brushing ou le lissage</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💤</div>
                         <h3 class="step-title">Rangement</h3>
-                        <p>Rangez soigneusement</p>
+                        <p>Rangez-les soigneusement ou attachez-les avant de dormir</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💡</div>
                         <h3 class="step-title">Brossage</h3>
-                        <p>De bas en haut, doucement</p>
+                        <p>Brossez toujours de bas en haut, doucement, pour éviter la casse</p>
                     </div>
                 </div>
             </div>
@@ -970,6 +1046,12 @@
     <script>
         // Calcul des prix et promotions
         document.addEventListener('DOMContentLoaded', function() {
+            // Pour les sections existantes
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+            
             // Pour le formulaire de commande
             const longueur = document.getElementById('longueur');
             const quantite = document.getElementById('quantite');
