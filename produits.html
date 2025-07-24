@@ -450,11 +450,6 @@
             font-weight: bold;
             font-size: 1.1rem;
             margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
         }
 
         .btn-whatsapp i {
@@ -487,11 +482,6 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
             z-index: 1000;
             animation: bounce 2s ease infinite;
-            transition: transform 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
         }
 
         @keyframes bounce {
@@ -534,11 +524,6 @@
             margin: 0 8px;
             color: var(--blanc);
             font-size: 1.3rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--rose-pale);
         }
 
         .copyright {
@@ -559,63 +544,6 @@
             font-size: 1rem;
             text-align: center;
             padding: 15px;
-            border-radius: 12px;
-        }
-
-        /* Message de confirmation */
-        .confirmation-message {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .confirmation-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .confirmation-icon {
-            font-size: 3rem;
-            color: #25D366;
-            margin-bottom: 20px;
-        }
-
-        .confirmation-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .confirmation-buttons button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .confirmation-buttons .btn-open {
-            background-color: #25D366;
-            color: white;
-        }
-
-        .confirmation-buttons .btn-close {
-            background-color: #e74c3c;
-            color: white;
         }
 
         /* Améliorations spécifiques pour mobile */
@@ -700,7 +628,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image1.jpg<br>Cheveux 100% vierges</div>
+                <img src="images/image1.jpg" alt="Cheveux 100% vierges" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image1.jpg<br>Cheveux 100% vierges</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">🌟 Cheveux 100 % Vierges</h2>
@@ -728,7 +656,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image3.jpg<br>Longueurs et prix</div>
+                <img src="images/image3.jpg" alt="Longueurs et prix" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image3.jpg<br>Longueurs et prix</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longueurs & Prix</h2>
@@ -789,11 +717,11 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image2.jpg<br>Longueurs spéciales</div>
+                <img src="images/image2.jpg" alt="Longueurs spéciales" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image2.jpg<br>Longueurs spéciales</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longueurs spéciales sur commande</h2>
-                <p>Les longueurs 26" à 40" sont disponibles uniquement sur commande.</p>
+                <p>Les longueurs 26" à 40" et aussi les perruques sont disponibles uniquement sur commande.</p>
                 <p>⏳ Délai de livraison estimé : 15 jours ouvrables.</p>
             </div>
         </div>
@@ -803,7 +731,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image4.jpg<br>Longévité et résistance</div>
+                <img src="images/image4.jpg" alt="Longévité et résistance" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image4.jpg<br>Longévité et résistance</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longévité & Résistance</h2>
@@ -827,7 +755,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image6.jpg<br>Pourquoi choisir MosieShop</div>
+                <img src="images/image6.jpg" alt="Pourquoi choisir MosieShop" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image6.jpg<br>Pourquoi choisir MosieShop</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">🟥 Pourquoi choisir MosieShop ?</h2>
@@ -875,7 +803,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image7.jpg<br>Pourquoi choisir nos extensions</div>
+                <img src="images/image7.jpg" alt="Pourquoi choisir nos extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image7.jpg<br>Pourquoi choisir nos extensions</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">💎 Pourquoi choisir nos extensions capillaires ?</h2>
@@ -898,7 +826,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <div class="image-placeholder">image8.jpg<br>Entretien des extensions</div>
+                <img src="images/image8.jpg" alt="Entretien des extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image8.jpg<br>Entretien des extensions</div>'">
             </div>
             <div class="content-text">
                 <h2 class="content-title">Comment entretenir vos extensions capillaires ?</h2>
@@ -1023,23 +951,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Message de confirmation -->
-    <div class="confirmation-message" id="confirmationMessage">
-        <div class="confirmation-content">
-            <div class="confirmation-icon">
-                <i class="fab fa-whatsapp"></i>
-            </div>
-            <h2>Votre commande est prête !</h2>
-            <p>Cliquez sur "Ouvrir WhatsApp" pour être redirigé vers l'application avec votre commande pré-remplie.</p>
-            <p>Si WhatsApp ne s'ouvre pas automatiquement, copiez ce lien :</p>
-            <p id="whatsapp-link-text" style="word-break: break-all; background: #f5f5f5; padding: 10px; border-radius: 5px; margin: 15px 0;"></p>
-            <div class="confirmation-buttons">
-                <button class="btn-open" id="openWhatsApp">Ouvrir WhatsApp</button>
-                <button class="btn-close" id="closeConfirmation">Fermer</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -1070,12 +981,6 @@
             const link = document.getElementById('whatsapplink');
             const nom = document.getElementById('nom');
             const type = document.getElementById('type');
-            const confirmationMessage = document.getElementById('confirmationMessage');
-            const openWhatsAppBtn = document.getElementById('openWhatsApp');
-            const closeConfirmationBtn = document.getElementById('closeConfirmation');
-            const whatsappLinkText = document.getElementById('whatsapp-link-text');
-            
-            let generatedWhatsappLink = '';
 
             function updateTotal() {
                 let unitPrice = parseFloat(longueur.value);
@@ -1123,10 +1028,7 @@
                     message += `*Nom du client* : ${nom.value.trim()}%0A%0A`;
                     message += `Merci de me confirmer la disponibilité et les modalités de paiement.`;
 
-                    // Créer le lien WhatsApp avec encodage correct
-                    generatedWhatsappLink = "https://wa.me/50944643250?text=" + encodeURIComponent(message);
-                    
-                    link.href = generatedWhatsappLink;
+                    link.href = "https://wa.me/50944643250?text=" + message;
                     link.style.display = 'inline-block';
                 } else {
                     link.style.display = 'none';
@@ -1136,32 +1038,6 @@
             [longueur, quantite, closure, nom, type].forEach(el => {
                 el.addEventListener('input', updateTotal);
                 el.addEventListener('change', updateTotal);
-            });
-
-            // Gestionnaire d'événement pour le bouton WhatsApp
-            link.addEventListener('click', function(e) {
-                if (nom.value.trim() === '') {
-                    e.preventDefault();
-                    alert('Veuillez entrer votre prénom avant de commander.');
-                    nom.focus();
-                    return;
-                }
-                
-                // Afficher la confirmation avant l'ouverture de WhatsApp
-                e.preventDefault();
-                whatsappLinkText.textContent = generatedWhatsappLink;
-                confirmationMessage.style.display = 'flex';
-            });
-
-            // Ouvrir WhatsApp
-            openWhatsAppBtn.addEventListener('click', function() {
-                window.open(generatedWhatsappLink, '_blank');
-                confirmationMessage.style.display = 'none';
-            });
-
-            // Fermer la confirmation
-            closeConfirmationBtn.addEventListener('click', function() {
-                confirmationMessage.style.display = 'none';
             });
 
             updateTotal();
