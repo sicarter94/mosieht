@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: var(--noir);
             background-color: var(--blanc);
             overflow-x: hidden;
@@ -33,15 +33,15 @@
 
         .header {
             background-color: var(--rose-pale);
-            padding: 15px 0;
+            padding: 12px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: var(--noir);
         }
 
@@ -50,14 +50,15 @@
         }
 
         .nav-links {
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .nav-links a {
-            margin: 0 10px;
+            margin: 0 8px;
             text-decoration: none;
             color: var(--noir);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
         }
 
@@ -66,15 +67,15 @@
         }
 
         .section {
-            padding: 80px 20px;
+            padding: 50px 15px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
             font-weight: 300;
             letter-spacing: 1px;
             color: var(--noir);
@@ -84,18 +85,18 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
+            width: 70px;
+            height: 2px;
             background: var(--rose-fonce);
         }
 
         .product-hero {
             background-color: var(--noir-fonce);
             color: var(--blanc);
-            padding: 60px 20px;
+            padding: 40px 15px;
             text-align: center;
         }
 
@@ -105,75 +106,61 @@
         }
 
         .hero-title {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
             color: var(--rose-pale);
+            line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
             opacity: 0.9;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
         .feature-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 20px 15px;
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
             color: var(--rose-pale);
         }
 
         .feature-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: var(--rose-pale);
         }
 
         .content-block {
             display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .content-block.reverse {
-            flex-direction: row-reverse;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
         .content-image {
-            flex: 1;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: all 0.5s ease;
-            min-height: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-height: 250px;
             background-color: var(--gris-clair);
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .content-image:hover {
-            transform: scale(1.03);
         }
 
         .content-image img {
@@ -184,153 +171,141 @@
         }
 
         .content-text {
-            flex: 1;
+            padding: 0 5px;
         }
 
         .content-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--rose-fonce);
         }
 
         .content-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
             color: var(--noir);
         }
 
         .feature-list {
             list-style: none;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .feature-list li {
-            margin-bottom: 15px;
-            padding-left: 30px;
+            margin-bottom: 10px;
+            padding-left: 25px;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .feature-list li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            top: 0;
+            top: -1px;
             color: var(--rose-fonce);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
         }
 
         .testimonial {
             font-style: italic;
-            margin: 30px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 15px;
             background: rgba(233, 179, 188, 0.1);
-            border-left: 4px solid var(--rose-fonce);
-            border-radius: 0 8px 8px 0;
+            border-left: 3px solid var(--rose-fonce);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
         }
 
         .promo-section {
             background: linear-gradient(135deg, var(--rose-pale), var(--bleu-ciel));
-            padding: 60px 20px;
+            padding: 40px 15px;
             text-align: center;
-            border-radius: 15px;
-            margin: 60px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .promo-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: var(--noir);
         }
 
         .promo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .promo-card {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .promo-card:hover {
-            transform: translateY(-10px);
-            background: var(--blanc);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
         }
 
         .promo-amount {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: bold;
             color: var(--rose-fonce);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .promo-desc {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .care-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .care-step {
             text-align: center;
-            padding: 30px;
+            padding: 20px 15px;
             background: var(--gris-clair);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .care-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background: var(--blanc);
+            border-radius: 12px;
         }
 
         .step-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             color: var(--rose-fonce);
         }
 
         .step-title {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
             color: var(--noir);
         }
 
         .order-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
         }
 
         .order-step {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: var(--rose-pale);
-            border-radius: 10px;
+            border-radius: 8px;
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -15px;
-            left: -15px;
-            width: 40px;
-            height: 40px;
+            top: -12px;
+            left: -12px;
+            width: 30px;
+            height: 30px;
             background: var(--rose-fonce);
             color: white;
             border-radius: 50%;
@@ -338,41 +313,42 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         /* Styles pour la nouvelle section Longueurs & Prix */
         .pricing-container {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .pricing-category {
             background: var(--gris-clair);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
 
         .pricing-category h3 {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--rose-fonce);
             color: var(--noir);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .price-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 1px dashed #ddd;
+            font-size: 0.95rem;
         }
 
         .price {
@@ -381,68 +357,62 @@
         }
 
         .promo-banner {
-            margin-top: 30px;
-            padding: 15px;
+            margin-top: 20px;
+            padding: 12px;
             background: var(--rose-pale);
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
             font-weight: 500;
             color: var(--noir);
             border: 1px solid var(--rose-fonce);
+            font-size: 0.95rem;
         }
 
         /* Styles pour le formulaire de commande */
         .order-form-container {
             background: var(--blanc);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 60px auto;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 40px auto;
             max-width: 800px;
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
             color: var(--noir);
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .form-group select, 
         .form-group input {
             width: 100%;
-            padding: 15px;
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 10px;
+            border-radius: 8px;
             font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group select:focus, 
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--rose-fonce);
-            box-shadow: 0 0 0 3px rgba(233, 179, 188, 0.3);
         }
 
         .price-display {
             background-color: var(--rose-pale);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px 0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 25px 0;
         }
 
         .price-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 12px;
-            padding-bottom: 12px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
             border-bottom: 1px dashed #ddd;
+            font-size: 0.95rem;
         }
 
         .price-row:last-child {
@@ -452,9 +422,9 @@
 
         .total-row {
             font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 10px;
-            padding-top: 10px;
+            font-size: 1.1rem;
+            margin-top: 8px;
+            padding-top: 8px;
             border-top: 2px solid var(--rose-fonce);
         }
 
@@ -474,58 +444,54 @@
             background-color: var(--vert-whatsapp);
             color: white;
             text-align: center;
-            padding: 16px;
-            border-radius: 10px;
+            padding: 14px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            margin-top: 15px;
+            transition: background-color 0.3s;
         }
 
         .btn-whatsapp:hover {
             background-color: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-whatsapp i {
-            margin-right: 10px;
+            margin-right: 8px;
         }
 
         .info-bubble {
             background-color: var(--rose-pale);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-size: 1rem;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 0.9rem;
             text-align: center;
             border: 1px dashed var(--rose-fonce);
         }
 
         .whatsapp-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             background-color: var(--vert-whatsapp);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
             z-index: 1000;
-            transition: all 0.3s ease;
             animation: bounce 2s ease infinite;
+            transition: transform 0.3s;
         }
 
         .whatsapp-btn:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
         }
 
         @keyframes bounce {
@@ -533,10 +499,10 @@
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-15px);
+                transform: translateY(-10px);
             }
             60% {
-                transform: translateY(-10px);
+                transform: translateY(-7px);
             }
         }
 
@@ -544,8 +510,8 @@
             background-color: var(--noir);
             color: var(--blanc);
             text-align: center;
-            padding: 60px 20px;
-            margin-top: 60px;
+            padding: 40px 15px;
+            margin-top: 40px;
         }
 
         .footer-content {
@@ -554,31 +520,30 @@
         }
 
         .footer-logo {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
         .social-links {
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .social-links a {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 8px;
             color: var(--blanc);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            transition: color 0.3s;
         }
 
         .social-links a:hover {
             color: var(--rose-pale);
-            transform: translateY(-3px);
         }
 
         .copyright {
-            margin-top: 20px;
-            font-size: 0.9rem;
+            margin-top: 15px;
+            font-size: 0.8rem;
             opacity: 0.7;
         }
 
@@ -591,73 +556,104 @@
             background: linear-gradient(45deg, var(--rose-pale), var(--bleu-ciel));
             color: var(--noir);
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
+            border-radius: 12px;
         }
 
-        @media (max-width: 768px) {
+        /* Message de confirmation */
+        .confirmation-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .confirmation-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .confirmation-icon {
+            font-size: 3rem;
+            color: #25D366;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .confirmation-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .confirmation-buttons .btn-open {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .confirmation-buttons .btn-close {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* Améliorations spécifiques pour mobile */
+        @media (min-width: 769px) {
             .content-block {
-                flex-direction: column;
+                flex-direction: row;
+                align-items: center;
+                gap: 30px;
             }
             
             .content-block.reverse {
-                flex-direction: column;
+                flex-direction: row-reverse;
+            }
+            
+            .section {
+                padding: 70px 20px;
             }
             
             .section-title {
                 font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .product-hero {
+                padding: 60px 20px;
             }
             
             .hero-title {
-                font-size: 2.2rem;
-            }
-            
-            .content-image {
-                min-height: 300px;
-            }
-            
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-category {
-                margin-bottom: 20px;
-            }
-            
-            .order-form-container {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section-title {
-                font-size: 1.7rem;
-            }
-            
-            .hero-title {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
             }
             
             .content-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             
-            .pricing-category h3 {
-                font-size: 1.2rem;
-            }
-            
-            .price-item {
-                font-size: 0.9rem;
-            }
-            
-            .order-form-container {
-                padding: 20px;
-            }
-            
-            .btn-whatsapp {
-                padding: 14px;
-                font-size: 1.1rem;
+            .feature-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 30px;
             }
         }
     </style>
@@ -704,7 +700,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <img src="images/image1.jpg" alt="Cheveux 100% vierges" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image1.jpg<br>Cheveux 100% vierges</div>'">
+                <div class="image-placeholder">image1.jpg<br>Cheveux 100% vierges</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">🌟 Cheveux 100 % Vierges</h2>
@@ -730,9 +726,9 @@
 
     <!-- Nouvelle Section : Longueurs & Prix -->
     <section class="section">
-        <div class="content-block reverse">
+        <div class="content-block">
             <div class="content-image">
-                <img src="images/image3.jpg" alt="Longueurs et prix" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image3.jpg<br>Longueurs et prix</div>'">
+                <div class="image-placeholder">image3.jpg<br>Longueurs et prix</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longueurs & Prix</h2>
@@ -791,9 +787,9 @@
 
     <!-- Section 2 : Longueurs spéciales -->
     <section class="section">
-        <div class="content-block reverse">
+        <div class="content-block">
             <div class="content-image">
-                <img src="images/image2.jpg" alt="Longueurs spéciales" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image2.jpg<br>Longueurs spéciales</div>'">
+                <div class="image-placeholder">image2.jpg<br>Longueurs spéciales</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longueurs spéciales sur commande</h2>
@@ -807,7 +803,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <img src="images/image4.jpg" alt="Longévité et résistance" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image4.jpg<br>Longévité et résistance</div>'">
+                <div class="image-placeholder">image4.jpg<br>Longévité et résistance</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">Longévité & Résistance</h2>
@@ -829,9 +825,9 @@
 
     <!-- Section 4 : Pourquoi choisir MosieShop -->
     <section class="section">
-        <div class="content-block reverse">
+        <div class="content-block">
             <div class="content-image">
-                <img src="images/image6.jpg" alt="Pourquoi choisir MosieShop" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image6.jpg<br>Pourquoi choisir MosieShop</div>'">
+                <div class="image-placeholder">image6.jpg<br>Pourquoi choisir MosieShop</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">🟥 Pourquoi choisir MosieShop ?</h2>
@@ -868,7 +864,7 @@
                 </div>
             </div>
             
-            <p style="margin-top: 30px; font-size: 1.1rem;">
+            <p style="margin-top: 20px; font-size: 1rem;">
                 🎁 Réduction automatique lors de la commande sur WhatsApp<br>
                 *Pas besoin de code promo, la réduction est calculée pour vous !
             </p>
@@ -879,7 +875,7 @@
     <section class="section">
         <div class="content-block">
             <div class="content-image">
-                <img src="images/image7.jpg" alt="Pourquoi choisir nos extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image7.jpg<br>Pourquoi choisir nos extensions</div>'">
+                <div class="image-placeholder">image7.jpg<br>Pourquoi choisir nos extensions</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">💎 Pourquoi choisir nos extensions capillaires ?</h2>
@@ -900,9 +896,9 @@
 
     <!-- Section 6 : Entretien -->
     <section class="section">
-        <div class="content-block reverse">
+        <div class="content-block">
             <div class="content-image">
-                <img src="images/image8.jpg" alt="Entretien des extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image8.jpg<br>Entretien des extensions</div>'">
+                <div class="image-placeholder">image8.jpg<br>Entretien des extensions</div>
             </div>
             <div class="content-text">
                 <h2 class="content-title">Comment entretenir vos extensions capillaires ?</h2>
@@ -911,37 +907,37 @@
                     <div class="care-step">
                         <div class="step-icon">🧼</div>
                         <h3 class="step-title">Shampooing doux</h3>
-                        <p>Lavez vos extensions avec un shampoing doux sans sulfate</p>
+                        <p>Lavez avec shampooing sans sulfate</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💧</div>
                         <h3 class="step-title">Hydratation</h3>
-                        <p>Hydratez-les régulièrement avec un après-shampoing ou un masque nourrissant</p>
+                        <p>Utilisez un après-shampoing nourrissant</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">🌬️</div>
                         <h3 class="step-title">Séchage naturel</h3>
-                        <p>Laissez sécher à l'air libre autant que possible</p>
+                        <p>Privilégiez l'air libre</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">🔥</div>
                         <h3 class="step-title">Protection thermique</h3>
-                        <p>Utilisez un protecteur thermique avant le brushing ou le lissage</p>
+                        <p>Avant brushing ou lissage</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💤</div>
                         <h3 class="step-title">Rangement</h3>
-                        <p>Rangez-les soigneusement ou attachez-les avant de dormir</p>
+                        <p>Rangez soigneusement</p>
                     </div>
                     
                     <div class="care-step">
                         <div class="step-icon">💡</div>
                         <h3 class="step-title">Brossage</h3>
-                        <p>Brossez toujours de bas en haut, doucement, pour éviter la casse</p>
+                        <p>De bas en haut, doucement</p>
                     </div>
                 </div>
             </div>
@@ -1027,6 +1023,23 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Message de confirmation -->
+    <div class="confirmation-message" id="confirmationMessage">
+        <div class="confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h2>Votre commande est prête !</h2>
+            <p>Cliquez sur "Ouvrir WhatsApp" pour être redirigé vers l'application avec votre commande pré-remplie.</p>
+            <p>Si WhatsApp ne s'ouvre pas automatiquement, copiez ce lien :</p>
+            <p id="whatsapp-link-text" style="word-break: break-all; background: #f5f5f5; padding: 10px; border-radius: 5px; margin: 15px 0;"></p>
+            <div class="confirmation-buttons">
+                <button class="btn-open" id="openWhatsApp">Ouvrir WhatsApp</button>
+                <button class="btn-close" id="closeConfirmation">Fermer</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -1046,12 +1059,6 @@
     <script>
         // Calcul des prix et promotions
         document.addEventListener('DOMContentLoaded', function() {
-            // Pour les sections existantes
-            const featureCards = document.querySelectorAll('.feature-card');
-            featureCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-            });
-            
             // Pour le formulaire de commande
             const longueur = document.getElementById('longueur');
             const quantite = document.getElementById('quantite');
@@ -1063,6 +1070,12 @@
             const link = document.getElementById('whatsapplink');
             const nom = document.getElementById('nom');
             const type = document.getElementById('type');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            const openWhatsAppBtn = document.getElementById('openWhatsApp');
+            const closeConfirmationBtn = document.getElementById('closeConfirmation');
+            const whatsappLinkText = document.getElementById('whatsapp-link-text');
+            
+            let generatedWhatsappLink = '';
 
             function updateTotal() {
                 let unitPrice = parseFloat(longueur.value);
@@ -1110,7 +1123,10 @@
                     message += `*Nom du client* : ${nom.value.trim()}%0A%0A`;
                     message += `Merci de me confirmer la disponibilité et les modalités de paiement.`;
 
-                    link.href = "https://wa.me/50944643250?text=" + message;
+                    // Créer le lien WhatsApp avec encodage correct
+                    generatedWhatsappLink = "https://wa.me/50944643250?text=" + encodeURIComponent(message);
+                    
+                    link.href = generatedWhatsappLink;
                     link.style.display = 'inline-block';
                 } else {
                     link.style.display = 'none';
@@ -1120,6 +1136,32 @@
             [longueur, quantite, closure, nom, type].forEach(el => {
                 el.addEventListener('input', updateTotal);
                 el.addEventListener('change', updateTotal);
+            });
+
+            // Gestionnaire d'événement pour le bouton WhatsApp
+            link.addEventListener('click', function(e) {
+                if (nom.value.trim() === '') {
+                    e.preventDefault();
+                    alert('Veuillez entrer votre prénom avant de commander.');
+                    nom.focus();
+                    return;
+                }
+                
+                // Afficher la confirmation avant l'ouverture de WhatsApp
+                e.preventDefault();
+                whatsappLinkText.textContent = generatedWhatsappLink;
+                confirmationMessage.style.display = 'flex';
+            });
+
+            // Ouvrir WhatsApp
+            openWhatsAppBtn.addEventListener('click', function() {
+                window.open(generatedWhatsappLink, '_blank');
+                confirmationMessage.style.display = 'none';
+            });
+
+            // Fermer la confirmation
+            closeConfirmationBtn.addEventListener('click', function() {
+                confirmationMessage.style.display = 'none';
             });
 
             updateTotal();
