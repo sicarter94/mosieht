@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MosieHt - Nos Produits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --rose-pale: #f8d7da;
+            --noir: #333;
+            --bleu-ciel: #b6e0fe;
+            --blanc: #fff;
+            --rose-fonce: #e9b3bc;
+            --gris-clair: #f5f5f5;
+            --noir-fonce: #1a1a1a;
+            --vert-whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--noir);
+            background-color: var(--blanc);
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: var(--rose-pale);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--noir);
+        }
+
+        .logo span {
+            color: var(--rose-fonce);
+        }
+
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--noir);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--rose-fonce);
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--noir);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--rose-fonce);
+        }
+
+        .product-hero {
+            background-color: var(--noir-fonce);
+            color: var(--blanc);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--rose-pale);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--rose-pale);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--rose-pale);
+        }
+
+        .content-block {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .content-block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
+            min-height: 400px;
+            background-color: var(--gris-clair);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-image:hover {
+            transform: scale(1.03);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-text {
+            flex: 1;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--rose-fonce);
+        }
+
+        .content-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--noir);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--rose-fonce);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(233, 179, 188, 0.1);
+            border-left: 4px solid var(--rose-fonce);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .promo-section {
+            background: linear-gradient(135deg, var(--rose-pale), var(--bleu-ciel));
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 60px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--noir);
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .promo-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+            background: var(--blanc);
+        }
+
+        .promo-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--rose-fonce);
+            margin-bottom: 15px;
+        }
+
+        .promo-desc {
+            font-size: 1.1rem;
+        }
+
+        .care-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .care-step {
+            text-align: center;
+            padding: 30px;
+            background: var(--gris-clair);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .care-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background: var(--blanc);
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--rose-fonce);
+        }
+
+        .step-title {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--noir);
+        }
+
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .order-step {
+            text-align: center;
+            padding: 20px;
+            background: var(--rose-pale);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background: var(--rose-fonce);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Styles pour la nouvelle section Longueurs & Prix */
+        .pricing-container {
+            margin-top: 30px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-category {
+            background: var(--gris-clair);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .pricing-category h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--rose-fonce);
+            color: var(--noir);
+            font-size: 1.4rem;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--rose-fonce);
+        }
+
+        .promo-banner {
+            margin-top: 30px;
+            padding: 15px;
+            background: var(--rose-pale);
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--noir);
+            border: 1px solid var(--rose-fonce);
+        }
+
+        /* Styles pour le formulaire de commande */
+        .order-form-container {
+            background: var(--blanc);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 60px auto;
+            max-width: 800px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--noir);
+            font-size: 1.1rem;
+        }
+
+        .form-group select, 
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group select:focus, 
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--rose-fonce);
+            box-shadow: 0 0 0 3px rgba(233, 179, 188, 0.3);
+        }
+
+        .price-display {
+            background-color: var(--rose-pale);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .total-row {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid var(--rose-fonce);
+        }
+
+        .prix-barre {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .reduction {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--vert-whatsapp);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-whatsapp i {
+            margin-right: 10px;
+        }
+
+        .info-bubble {
+            background-color: var(--rose-pale);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 1rem;
+            text-align: center;
+            border: 1px dashed var(--rose-fonce);
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--vert-whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: bounce 2s ease infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        footer {
+            background-color: var(--noir);
+            color: var(--blanc);
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--blanc);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--rose-pale);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--rose-pale), var(--bleu-ciel));
+            color: var(--noir);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .content-block {
+                flex-direction: column;
+            }
+            
+            .content-block.reverse {
+                flex-direction: column;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .content-image {
+                min-height: 300px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-category {
+                margin-bottom: 20px;
+            }
+            
+            .order-form-container {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .content-title {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-category h3 {
+                font-size: 1.2rem;
+            }
+            
+            .price-item {
+                font-size: 0.9rem;
+            }
+            
+            .order-form-container {
+                padding: 20px;
+            }
+            
+            .btn-whatsapp {
+                padding: 14px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Mosie<span>Ht</span></div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="produits.html" class="active">Produits</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="product-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Extensions Capillaires 100% Humaines</h1>
+            <p class="hero-subtitle">Douces, durables et faciles à coiffer</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Qualité Premium</h3>
+                    <p>Cheveux 100% vierges et naturels</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏳</div>
+                    <h3 class="feature-title">Longue Durée</h3>
+                    <p>6 à 12 mois d'utilisation</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="feature-title">Polyvalent</h3>
+                    <p>Lissables, bouclables, colorables</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1 : Qualité des cheveux -->
+    <section class="section">
+        <div class="content-block">
+            <div class="content-image">
+                <img src="images/image1.jpg" alt="Cheveux 100% vierges" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image1.jpg<br>Cheveux 100% vierges</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">🌟 Cheveux 100 % Vierges</h2>
+                <p class="content-subtitle">Brillance Naturelle & Longévité</p>
+                <p>Nos cheveux sont issus de donneuses uniques, avec les cuticules intactes, pour garantir une qualité supérieure, une texture soyeuse et une longue durée de vie.</p>
+                
+                <ul class="feature-list">
+                    <li>Cheveux 100 % humains, qualité Remy</li>
+                    <li>Origine : Brésilienne – vierges, non traités chimiquement</li>
+                    <li>Texture : droite naturelle, douce au toucher</li>
+                    <li>Aucune odeur, aucune fibre synthétique</li>
+                    <li>Peut être lissé, bouclé, coloré, sans s’abîmer</li>
+                    <li>Poids par paquet : 95g à 105g</li>
+                    <li>Résiste à l’humidité et ne s’emmêle pas facilement</li>
+                </ul>
+                
+                <div class="testimonial">
+                    "Des cheveux que vous pouvez porter avec confiance — jour après jour."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouvelle Section : Longueurs & Prix -->
+    <section class="section">
+        <div class="content-block reverse">
+            <div class="content-image">
+                <img src="images/image3.jpg" alt="Longueurs et prix" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image3.jpg<br>Longueurs et prix</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">Longueurs & Prix</h2>
+                <p class="content-subtitle">Nos longueurs standard disponibles</p>
+                
+                <div class="pricing-container">
+                    <div class="pricing-grid">
+                        <div class="pricing-category">
+                            <h3>Extensions</h3>
+                            <div class="price-item">
+                                <span>14 pouces</span>
+                                <span class="price">25 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>16 pouces</span>
+                                <span class="price">30 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>18 pouces</span>
+                                <span class="price">35 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>20 pouces</span>
+                                <span class="price">40 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>22 pouces</span>
+                                <span class="price">45 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>24 pouces</span>
+                                <span class="price">55 USD</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-category">
+                            <h3>🖤 Closures 4x4</h3>
+                            <div class="price-item">
+                                <span>16 pouces</span>
+                                <span class="price">30 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>18 pouces</span>
+                                <span class="price">35 USD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="promo-banner">
+                        <p>🔥 <strong>Promotions:</strong> -5$ dès 2 mèches | -10$ dès 3 mèches ou 2 mèches + closure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 : Longueurs spéciales -->
+    <section class="section">
+        <div class="content-block reverse">
+            <div class="content-image">
+                <img src="images/image2.jpg" alt="Longueurs spéciales" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image2.jpg<br>Longueurs spéciales</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">Longueurs spéciales sur commande</h2>
+                <p>Les longueurs 26" à 40" sont disponibles uniquement sur commande.</p>
+                <p>⏳ Délai de livraison estimé : 15 jours ouvrables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3 : Longévité -->
+    <section class="section">
+        <div class="content-block">
+            <div class="content-image">
+                <img src="images/image4.jpg" alt="Longévité et résistance" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image4.jpg<br>Longévité et résistance</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">Longévité & Résistance</h2>
+                <p>🔁 Une durée de vie exceptionnelle – Un vrai investissement beauté</p>
+                <p>Nos mèches droites ne sont pas juste belles à l’achat. Elles sont conçues pour durer, résister à l’humidité et suivre votre style, jour après jour.</p>
+                
+                <ul class="feature-list">
+                    <li>Durée de vie : 6 à 12 mois (avec bon entretien)</li>
+                    <li>Réutilisables : peuvent être posées plusieurs fois sans perdre leur éclat</li>
+                    <li>Ne s’emmêlent pas facilement, même dans les climats tropicaux</li>
+                    <li>Peuvent être colorées, lissées ou bouclées selon vos envies</li>
+                    <li>Tenue parfaite avec ou sans colle</li>
+                </ul>
+                
+                <p>🌟 Faites le choix d’une beauté durable avec MosieShop.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 : Pourquoi choisir MosieShop -->
+    <section class="section">
+        <div class="content-block reverse">
+            <div class="content-image">
+                <img src="images/image6.jpg" alt="Pourquoi choisir MosieShop" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image6.jpg<br>Pourquoi choisir MosieShop</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">🟥 Pourquoi choisir MosieShop ?</h2>
+                <p>🌟 MosieShop – Approuvé par nos clientes, adoré dès la première pose</p>
+                <p>Ce ne sont pas juste des extensions. C’est une expérience de confiance et de qualité, validée par des centaines de femmes.</p>
+                
+                <ul class="feature-list">
+                    <li>Cheveux 100 % humains vierges, qualité Remy</li>
+                    <li>Livraison rapide et fiable partout en Haïti</li>
+                    <li>Commandes faciles par WhatsApp, sans carte bancaire</li>
+                    <li>Réductions automatiques dès 2 packs achetés</li>
+                    <li>Service client réactif 7/7 – Nous répondons rapidement à vos questions</li>
+                </ul>
+                
+                <p>🔒 Chez MosieShop, vous commandez avec confiance — la preuve est dans les résultats et dans les messages de nos clientes satisfaites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Promotions -->
+    <section class="section">
+        <div class="promo-section">
+            <h2 class="promo-title">🔥 Promotions en cours</h2>
+            
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-amount">-5$</div>
+                    <p class="promo-desc">dès 2 mèches achetées</p>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="promo-amount">-10$</div>
+                    <p class="promo-desc">dès 3 mèches ou 2 mèches + 1 closure</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 1.1rem;">
+                🎁 Réduction automatique lors de la commande sur WhatsApp<br>
+                *Pas besoin de code promo, la réduction est calculée pour vous !
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 5 : Pourquoi choisir nos extensions -->
+    <section class="section">
+        <div class="content-block">
+            <div class="content-image">
+                <img src="images/image7.jpg" alt="Pourquoi choisir nos extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image7.jpg<br>Pourquoi choisir nos extensions</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">💎 Pourquoi choisir nos extensions capillaires ?</h2>
+                
+                <ul class="feature-list">
+                    <li>100% cheveux humains : doux, naturels, sans nœuds</li>
+                    <li>Aucune chute : mèches épaisses de la racine aux pointes</li>
+                    <li>Longue durée : réutilisables, lavables et lissables</li>
+                    <li>S'adaptent à toutes vos coiffures : naturelles, lisses ou colorées</li>
+                    <li>Livraison rapide en Haïti</li>
+                    <li>Support client personnalisé via WhatsApp</li>
+                </ul>
+                
+                <p>🖤 Des cheveux de qualité, pour une beauté sans compromis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6 : Entretien -->
+    <section class="section">
+        <div class="content-block reverse">
+            <div class="content-image">
+                <img src="images/image8.jpg" alt="Entretien des extensions" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>image8.jpg<br>Entretien des extensions</div>'">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">Comment entretenir vos extensions capillaires ?</h2>
+                
+                <div class="care-steps">
+                    <div class="care-step">
+                        <div class="step-icon">🧼</div>
+                        <h3 class="step-title">Shampooing doux</h3>
+                        <p>Lavez vos extensions avec un shampoing doux sans sulfate</p>
+                    </div>
+                    
+                    <div class="care-step">
+                        <div class="step-icon">💧</div>
+                        <h3 class="step-title">Hydratation</h3>
+                        <p>Hydratez-les régulièrement avec un après-shampoing ou un masque nourrissant</p>
+                    </div>
+                    
+                    <div class="care-step">
+                        <div class="step-icon">🌬️</div>
+                        <h3 class="step-title">Séchage naturel</h3>
+                        <p>Laissez sécher à l'air libre autant que possible</p>
+                    </div>
+                    
+                    <div class="care-step">
+                        <div class="step-icon">🔥</div>
+                        <h3 class="step-title">Protection thermique</h3>
+                        <p>Utilisez un protecteur thermique avant le brushing ou le lissage</p>
+                    </div>
+                    
+                    <div class="care-step">
+                        <div class="step-icon">💤</div>
+                        <h3 class="step-title">Rangement</h3>
+                        <p>Rangez-les soigneusement ou attachez-les avant de dormir</p>
+                    </div>
+                    
+                    <div class="care-step">
+                        <div class="step-icon">💡</div>
+                        <h3 class="step-title">Brossage</h3>
+                        <p>Brossez toujours de bas en haut, doucement, pour éviter la casse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Commander (Formulaire) -->
+    <section class="section">
+        <h2 class="section-title">🛒 Passer votre commande</h2>
+        
+        <div class="order-form-container">
+            <div class="form-group">
+                <label for="type">Type de cheveux :</label>
+                <select id="type">
+                    <option value="Straight">Lisse (Straight)</option>
+                    <option value="Body Wave">Légèrement ondulé (Body Wave)</option>
+                    <option value="Curly">Bouclé (Curly)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="longueur">Longueur :</label>
+                <select id="longueur">
+                    <option value="25">14 pouces - $25</option>
+                    <option value="30">16 pouces - $30</option>
+                    <option value="35">18 pouces - $35</option>
+                    <option value="40">20 pouces - $40</option>
+                    <option value="45">22 pouces - $45</option>
+                    <option value="55">24 pouces - $55</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantite">Quantité :</label>
+                <input type="number" id="quantite" value="1" min="1">
+            </div>
+            
+            <div class="form-group">
+                <label for="closure">Ajouter une Closure 4x4 :</label>
+                <select id="closure">
+                    <option value="0">Non, merci</option>
+                    <option value="30">16 pouces - $30</option>
+                    <option value="35">18 pouces - $35</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="nom">Votre prénom :</label>
+                <input type="text" id="nom" placeholder="Ex: Marie" required>
+            </div>
+            
+            <div class="price-display">
+                <div class="price-row">
+                    <span>Prix unitaire :</span>
+                    <span id="prixUnitaire">$25</span>
+                </div>
+                <div class="price-row">
+                    <span>Total avant réduction :</span>
+                    <span class="prix-barre" id="prixSansReduction">$25</span>
+                </div>
+                <div class="price-row reduction">
+                    <span>Réduction appliquée :</span>
+                    <span id="reductionText">-$0</span>
+                </div>
+                <div class="price-row total-row">
+                    <span>Total à payer :</span>
+                    <span id="total">$25</span>
+                </div>
+            </div>
+            
+            <a id="whatsapplink" href="#" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+            </a>
+            
+            <div class="info-bubble">
+                <i class="fas fa-info-circle"></i> Réductions automatiques : -$5 dès 2 mèches, -$10 dès 3 mèches ou 2 mèches + closure
+            </div>
+        </div>
+    </section>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/50944643250" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MosieHt</div>
+            <p>Des extensions capillaires d'exception pour une beauté authentique</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 MosieHt. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Calcul des prix et promotions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pour les sections existantes
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+            
+            // Pour le formulaire de commande
+            const longueur = document.getElementById('longueur');
+            const quantite = document.getElementById('quantite');
+            const closure = document.getElementById('closure');
+            const total = document.getElementById('total');
+            const prixSansReduction = document.getElementById('prixSansReduction');
+            const prixUnitaire = document.getElementById('prixUnitaire');
+            const reductionText = document.getElementById('reductionText');
+            const link = document.getElementById('whatsapplink');
+            const nom = document.getElementById('nom');
+            const type = document.getElementById('type');
+
+            function updateTotal() {
+                let unitPrice = parseFloat(longueur.value);
+                let qte = parseInt(quantite.value);
+                let closurePrice = parseFloat(closure.value);
+                let base = unitPrice * qte;
+
+                prixUnitaire.textContent = `$${unitPrice}`;
+
+                // Logique de réduction :
+                let reduction = 0;
+                if (qte >= 3) {
+                    reduction = 10;
+                } else if (qte === 2 && closurePrice > 0) {
+                    reduction = 10;
+                } else if (qte === 2 && closurePrice === 0) {
+                    reduction = 5;
+                }
+
+                let totalAvantReduction = base + closurePrice;
+                let totalApresReduction = totalAvantReduction - reduction;
+
+                prixSansReduction.textContent = `$${totalAvantReduction}`;
+                reductionText.textContent = `-$${reduction}`;
+                total.textContent = `$${totalApresReduction}`;
+
+                if (nom.value.trim()) {
+                    let message = `Bonjour MosieHt, je souhaite commander :%0A%0A`;
+                    message += `*Type de cheveux* : ${type.options[type.selectedIndex].text}%0A`;
+                    message += `*Longueur* : ${longueur.options[longueur.selectedIndex].text}%0A`;
+                    message += `*Quantité* : ${qte}%0A`;
+                    if (closurePrice > 0) {
+                        message += `*Closure* : ${closure.options[closure.selectedIndex].text}%0A`;
+                    }
+                    message += `%0A`;
+                    message += `*Détail du calcul* :%0A`;
+                    message += `- ${qte} x $${unitPrice} = $${base}%0A`;
+                    if (closurePrice > 0) {
+                        message += `- Closure : $${closurePrice}%0A`;
+                    }
+                    if (reduction > 0) {
+                        message += `- Réduction : -$${reduction}%0A`;
+                    }
+                    message += `➡️ *Total estimé* : $${totalApresReduction}%0A%0A`;
+                    message += `*Nom du client* : ${nom.value.trim()}%0A%0A`;
+                    message += `Merci de me confirmer la disponibilité et les modalités de paiement.`;
+
+                    link.href = "https://wa.me/50944643250?text=" + message;
+                    link.style.display = 'inline-block';
+                } else {
+                    link.style.display = 'none';
+                }
+            }
+
+            [longueur, quantite, closure, nom, type].forEach(el => {
+                el.addEventListener('input', updateTotal);
+                el.addEventListener('change', updateTotal);
+            });
+
+            updateTotal();
+        });
+    </script>
+</body>
+</html>
