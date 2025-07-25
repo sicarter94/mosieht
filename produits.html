@@ -569,6 +569,8 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         
         .testimonial-card:hover {
@@ -576,9 +578,15 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
         
+        .testimonial-content {
+            padding: 20px;
+            order: 1; /* Contenu en premier */
+        }
+        
         .testimonial-image {
             height: 200px;
             overflow: hidden;
+            order: 2; /* Image en second */
         }
         
         .testimonial-image img {
@@ -590,10 +598,6 @@
         
         .testimonial-card:hover .testimonial-image img {
             transform: scale(1.05);
-        }
-        
-        .testimonial-content {
-            padding: 20px;
         }
         
         .testimonial-rating {
@@ -673,6 +677,51 @@
             
             .testimonials-container {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+        
+        /* Optimisations supplémentaires pour mobile */
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .testimonial-image {
+                height: 150px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .content-title {
+                font-size: 1.4rem;
+            }
+            
+            .content-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .testimonial-text {
+                font-size: 0.95rem;
+            }
+            
+            .pricing-category h3 {
+                font-size: 1.1rem;
+            }
+            
+            .price-item {
+                font-size: 0.9rem;
+            }
+            
+            .btn-whatsapp {
+                font-size: 1rem;
+                padding: 12px;
             }
         }
     </style>
@@ -970,61 +1019,56 @@
         <div class="testimonials-container">
             <!-- Avis 1 -->
             <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="images/avis1.jpg" alt="Avis client 1" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis1.jpg<br>Avis client</div>'">
-                </div>
                 <div class="testimonial-content">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Moun ki pral metel pou mwen we l li dim li bon!!!"</p>
-                    <div class="testimonial-name">-</div>
+                    <p class="testimonial-text">"Moun ki pral metel pou mwen we l li dim li bon!"</p>
+                </div>
+                <div class="testimonial-image">
+                    <img src="images/avis1.jpg" alt="Avis client 1" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis1.jpg<br>Avis client</div>'">
                 </div>
             </div>
             
             <!-- Avis 2 -->
             <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="images/avis2.jpg" alt="Avis client 2" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis2.jpg<br>Avis client</div>'">
-                </div>
                 <div class="testimonial-content">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Wel bel li soup!!!"</p>
-                    <div class="testimonial-name">-</div>
+                    <p class="testimonial-text">"Wel bel li soup!"</p>
+                </div>
+                <div class="testimonial-image">
+                    <img src="images/avis2.jpg" alt="Avis client 2" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis2.jpg<br>Avis client</div>'">
                 </div>
             </div>
             
             <!-- Avis 3 -->
             <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="images/avis3.jpg" alt="Avis client 3" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis3.jpg<br>Avis client</div>'">
-                </div>
                 <div class="testimonial-content">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Se menm type ak cheveux m!!!"</p>
-                    <div class="testimonial-name">-.</div>
+                    <p class="testimonial-text">"Se menm type ak cheveux m!"</p>
+                </div>
+                <div class="testimonial-image">
+                    <img src="images/avis3.jpg" alt="Avis client 3" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis3.jpg<br>Avis client</div>'">
                 </div>
             </div>
             
             <!-- Avis 4 -->
             <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="images/avis4.jpg" alt="Avis client 4" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis4.jpg<br>Avis client</div>'">
-                </div>
                 <div class="testimonial-content">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Mw resi achete yon gref nan men yon moun sou rezo a mw satisfe!!!"</p>
-                    <div class="testimonial-name">-</div>
+                    <p class="testimonial-text">"Mw resi achete yon gref nan men yon moun sou rezo a mw satisfe!"</p>
+                </div>
+                <div class="testimonial-image">
+                    <img src="images/avis4.jpg" alt="Avis client 4" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis4.jpg<br>Avis client</div>'">
                 </div>
             </div>
             
             <!-- Avis 5 -->
             <div class="testimonial-card">
-                <div class="testimonial-image">
-                    <img src="images/avis5.jpg" alt="Avis client 5" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis5.jpg<br>Avis client</div>'">
-                </div>
                 <div class="testimonial-content">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Mpa regret mw te achte ladan yo pa gen manti nan sa bon bagay!!!"</p>
-                    <div class="testimonial-name">-</div>
+                    <p class="testimonial-text">"Mpa regret mw te achte ladan yo pa gen manti nan sa bon bagay!"</p>
+                </div>
+                <div class="testimonial-image">
+                    <img src="images/avis5.jpg" alt="Avis client 5" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'>avis5.jpg<br>Avis client</div>'">
                 </div>
             </div>
         </div>
