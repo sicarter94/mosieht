@@ -806,6 +806,42 @@
                         <div class="pricing-category">
                             <h3>Extensions</h3>
                             <div class="price-item">
+                                <span>12 pouces</span>
+                                <span class="price">25 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>14 pouces</span>
+                                <span class="price">30 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>16 pouces</span>
+                                <span class="price">35 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>18 pouces</span>
+                                <span class="price">40 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>20 pouces</span>
+                                <span class="price">45 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>22 pouces</span>
+                                <span class="price">50 USD</span>
+                            </div>
+                            <div class="price-item">
+                                <span>24 pouces</span>
+                                <span class="price">55 USD</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-category">
+                            <h3>🖤 Closures 4x4</h3>
+                             <div class="price-item">
+                                <span>12 pouces</span>
+                                <span class="price">23 USD</span>
+                            </div>
+                             <div class="price-item">
                                 <span>14 pouces</span>
                                 <span class="price">25 USD</span>
                             </div>
@@ -817,35 +853,15 @@
                                 <span>18 pouces</span>
                                 <span class="price">35 USD</span>
                             </div>
-                            <div class="price-item">
+                             <div class="price-item">
                                 <span>20 pouces</span>
                                 <span class="price">40 USD</span>
-                            </div>
-                            <div class="price-item">
-                                <span>22 pouces</span>
-                                <span class="price">45 USD</span>
-                            </div>
-                            <div class="price-item">
-                                <span>24 pouces</span>
-                                <span class="price">55 USD</span>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-category">
-                            <h3>🖤 Closures 4x4</h3>
-                            <div class="price-item">
-                                <span>16 pouces</span>
-                                <span class="price">30 USD</span>
-                            </div>
-                            <div class="price-item">
-                                <span>18 pouces</span>
-                                <span class="price">35 USD</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="promo-banner">
-                        <p>🔥 <strong>Promotions:</strong> -5$ dès 2 mèches | -10$ dès 3 mèches ou 2 mèches + closure</p>
+                        <p>🔥 <strong>Promotions:</strong> Non disponibles</p>
                     </div>
                 </div>
             </div>
@@ -911,30 +927,6 @@
                 
                 <p>🔒 Chez Mosie Store, vous commandez avec confiance — la preuve est dans les résultats et dans les messages de nos clientes satisfaites.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Section Promotions -->
-    <section class="section">
-        <div class="promo-section">
-            <h2 class="promo-title">🔥 Promotions en cours</h2>
-            
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <div class="promo-amount">-5$</div>
-                    <p class="promo-desc">dès 2 mèches achetées</p>
-                </div>
-                
-                <div class="promo-card">
-                    <div class="promo-amount">-10$</div>
-                    <p class="promo-desc">dès 3 mèches ou 2 mèches + 1 closure</p>
-                </div>
-            </div>
-            
-            <p style="margin-top: 20px; font-size: 1rem;">
-                🎁 Réduction automatique lors de la commande sur WhatsApp<br>
-                *Pas besoin de code promo, la réduction est calculée pour vous !
-            </p>
         </div>
     </section>
 
@@ -1076,75 +1068,73 @@
     </section>
 
     <!-- Section Commander (Formulaire) -->
-    <section class="section">
-        <h2 class="section-title">🛒 Passer votre commande</h2>
+<section class="section">
+    <h2 class="section-title">🛒 Passer votre commande</h2>
+    
+    <div class="order-form-container">
+        <div class="form-group">
+            <label for="type">Type de cheveux :</label>
+            <select id="type">
+                <option value="Straight">Lisse (Straight)</option>
+                <option value="Body Wave">Légèrement ondulé (Body Wave)</option>
+                <option value="Curly">Bouclé (Curly)</option>
+            </select>
+        </div>
         
-        <div class="order-form-container">
-            <div class="form-group">
-                <label for="type">Type de cheveux :</label>
-                <select id="type">
-                    <option value="Straight">Lisse (Straight)</option>
-                    <option value="Body Wave">Légèrement ondulé (Body Wave)</option>
-                    <option value="Curly">Bouclé (Curly)</option>
-                </select>
+        <div class="form-group">
+            <label for="longueur">Longueur :</label>
+            <select id="longueur">
+                <option value="25">12 pouces - $25</option>
+                <option value="30">14 pouces - $30</option>
+                <option value="35">16 pouces - $35</option>
+                <option value="40">18 pouces - $40</option>
+                <option value="45">20 pouces - $45</option>
+                <option value="50">22 pouces - $50</option>
+                <option value="55">24 pouces - $55</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="quantite">Quantité :</label>
+            <input type="number" id="quantite" value="1" min="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="closure">Ajouter une Closure 4x4 :</label>
+            <select id="closure">
+                <option value="0">Non, merci</option>
+                <option value="23">12 pouces - $23</option>
+                <option value="25">14 pouces - $25</option>
+                <option value="30">16 pouces - $30</option>
+                <option value="35">18 pouces - $35</option>
+                <option value="40">20 pouces - $40</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="nom">Votre prénom :</label>
+            <input type="text" id="nom" placeholder="Ex: Marie">
+        </div>
+        
+        <div class="price-display">
+            <div class="price-row">
+                <span>Prix unitaire :</span>
+                <span id="prixUnitaire">$25</span>
             </div>
-            
-            <div class="form-group">
-                <label for="longueur">Longueur :</label>
-                <select id="longueur">
-                    <option value="25">14 pouces - $25</option>
-                    <option value="30">16 pouces - $30</option>
-                    <option value="35">18 pouces - $35</option>
-                    <option value="40">20 pouces - $40</option>
-                    <option value="45">22 pouces - $45</option>
-                    <option value="55">24 pouces - $55</option>
-                </select>
+            <div class="price-row total-row">
+                <span>Total à payer :</span>
+                <span id="total">$25</span>
             </div>
-            
-            <div class="form-group">
-                <label for="quantite">Quantité :</label>
-                <input type="number" id="quantite" value="1" min="1">
-            </div>
-            
-            <div class="form-group">
-                <label for="closure">Ajouter une Closure 4x4 :</label>
-                <select id="closure">
-                    <option value="0">Non, merci</option>
-                    <option value="30">16 pouces - $30</option>
-                    <option value="35">18 pouces - $35</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="nom">Votre prénom :</label>
-                <input type="text" id="nom" placeholder="Ex: Marie" required>
-            </div>
-            
-            <div class="price-display">
-                <div class="price-row">
-                    <span>Prix unitaire :</span>
-                    <span id="prixUnitaire">$25</span>
-                </div>
-                <div class="price-row">
-                    <span>Total avant réduction :</span>
-                    <span class="prix-barre" id="prixSansReduction">$25</span>
-                </div>
-                <div class="price-row reduction">
-                    <span>Réduction appliquée :</span>
-                    <span id="reductionText">-$0</span>
-                </div>
-                <div class="price-row total-row">
-                    <span>Total à payer :</span>
-                    <span id="total">$25</span>
-                </div>
-            </div>
-            
-            <a id="whatsapplink" href="#" target="_blank" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
-            </a>
+        </div>
+        
+        <a id="whatsapplink" href="#" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+        </a>
+    </div>
+</section>
             
             <div class="info-bubble">
-                <i class="fas fa-info-circle"></i> Réductions automatiques : -$5 dès 2 mèches, -$10 dès 3 mèches ou 2 mèches + closure
+                <i class="fas fa-info-circle"></i> taux du jours 135 Gourdes
             </div>
         </div>
     </section>
@@ -1188,81 +1178,56 @@
             </div>
     </footer>
 
-    <script>
-        // Calcul des prix et promotions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Pour le formulaire de commande
-            const longueur = document.getElementById('longueur');
-            const quantite = document.getElementById('quantite');
-            const closure = document.getElementById('closure');
-            const total = document.getElementById('total');
-            const prixSansReduction = document.getElementById('prixSansReduction');
-            const prixUnitaire = document.getElementById('prixUnitaire');
-            const reductionText = document.getElementById('reductionText');
-            const link = document.getElementById('whatsapplink');
-            const nom = document.getElementById('nom');
-            const type = document.getElementById('type');
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // On sélectionne tous les éléments
+    const typeSelect = document.getElementById('type');
+    const longueurSelect = document.getElementById('longueur');
+    const quantiteInput = document.getElementById('quantite');
+    const closureSelect = document.getElementById('closure');
+    const nomInput = document.getElementById('nom');
+    const totalDisplay = document.getElementById('total');
+    const prixUnitaireDisplay = document.getElementById('prixUnitaire');
+    const whatsappLink = document.getElementById('whatsapplink');
 
-            function updateTotal() {
-                let unitPrice = parseFloat(longueur.value);
-                let qte = parseInt(quantite.value);
-                let closurePrice = parseFloat(closure.value);
-                let base = unitPrice * qte;
+    function mettreAJourCalcul() {
+        // 1. Récupérer les valeurs
+        const prixMeche = parseInt(longueurSelect.value) || 0;
+        const qte = parseInt(quantiteInput.value) || 1;
+        const prixClosure = parseInt(closureSelect.value) || 0;
+        const nom = nomInput.value.trim() || "Client(e)";
 
-                prixUnitaire.textContent = `$${unitPrice}`;
+        // 2. Calculer le total (SANS PROMOTION)
+        const totalFinal = (prixMeche * qte) + prixClosure;
 
-                // Logique de réduction :
-                let reduction = 0;
-                if (qte >= 3) {
-                    reduction = 10;
-                } else if (qte === 2 && closurePrice > 0) {
-                    reduction = 10;
-                } else if (qte === 2 && closurePrice === 0) {
-                    reduction = 5;
-                }
+        // 3. Afficher les résultats sur la page
+        prixUnitaireDisplay.textContent = "$" + prixMeche;
+        totalDisplay.textContent = "$" + totalFinal;
 
-                let totalAvantReduction = base + closurePrice;
-                let totalApresReduction = totalAvantReduction - reduction;
+        // 4. Générer le lien WhatsApp
+        const numero = "50944643250";
+        const texte = `Bonjour ! Moi c'est ${nom}.
+Je souhaite commander :
+- Type : ${typeSelect.value}
+- Longueur : ${longueurSelect.options[longueurSelect.selectedIndex].text}
+- Quantité : ${qte}
+- Closure : ${prixClosure > 0 ? closureSelect.options[closureSelect.selectedIndex].text : "Aucune"}
 
-                prixSansReduction.textContent = `$${totalAvantReduction}`;
-                reductionText.textContent = `-$${reduction}`;
-                total.textContent = `$${totalApresReduction}`;
+*Total : $${totalFinal}*`;
 
-                if (nom.value.trim()) {
-                    let message = `Bonjour Mosie Store, je souhaite commander :%0A%0A`;
-                    message += `*Type de cheveux* : ${type.options[type.selectedIndex].text}%0A`;
-                    message += `*Longueur* : ${longueur.options[longueur.selectedIndex].text}%0A`;
-                    message += `*Quantité* : ${qte}%0A`;
-                    if (closurePrice > 0) {
-                        message += `*Closure* : ${closure.options[closure.selectedIndex].text}%0A`;
-                    }
-                    message += `%0A`;
-                    message += `*Détail du calcul* :%0A`;
-                    message += `- ${qte} x $${unitPrice} = $${base}%0A`;
-                    if (closurePrice > 0) {
-                        message += `- Closure : $${closurePrice}%0A`;
-                    }
-                    if (reduction > 0) {
-                        message += `- Réduction : -$${reduction}%0A`;
-                    }
-                    message += `➡️ *Total estimé* : $${totalApresReduction}%0A%0A`;
-                    message += `*Nom du client* : ${nom.value.trim()}%0A%0A`;
-                    message += `Merci de me confirmer la disponibilité et les modalités de paiement.`;
+        whatsappLink.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texte);
+    }
 
-                    link.href = "https://wa.me/50944643250?text=" + message;
-                    link.style.display = 'inline-block';
-                } else {
-                    link.style.display = 'none';
-                }
-            }
+    // Écouter tous les changements
+    longueurSelect.addEventListener('change', mettreAJourCalcul);
+    quantiteInput.addEventListener('input', mettreAJourCalcul);
+    closureSelect.addEventListener('change', mettreAJourCalcul);
+    typeSelect.addEventListener('change', mettreAJourCalcul);
+    nomInput.addEventListener('input', mettreAJourCalcul);
 
-            [longueur, quantite, closure, nom, type].forEach(el => {
-                el.addEventListener('input', updateTotal);
-                el.addEventListener('change', updateTotal);
-            });
-
-            updateTotal();
-        });
-    </script>
+    // Lancer un premier calcul au chargement
+    mettreAJourCalcul();
+});
+</script>
 </body>
 </html>
